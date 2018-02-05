@@ -30,6 +30,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.4
 
 
 Page {
@@ -64,10 +65,38 @@ Page {
                 title: qsTr("UI Template")
             }
             Label {
+                id: greeting
                 x: Theme.horizontalPageMargin
                 text: qsTr("Hello Sailors")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraLarge
+            }
+            Button {
+                text: qsTr("pyyttonia")
+                onClicked: {
+                    python.loadGreeting();
+                }
+            }
+
+            Python {
+                id: python
+                Component.onCompleted: {
+                    addImportPath(Qt.resolvedUrl('.'));
+                    setHandler('greeting', function(greets) {
+                        greeting.text = greets;
+                    })
+                    importModule('jup', function () {});
+                }
+                function loadGreeting() {
+                    call('jup.db.hello', function() {});
+                }
+                onError: {
+                    console.log('python error: ' + traceback);
+                }
+
+                onReceived: {
+                    console.log('message from python: ' + data);
+                }
             }
         }
     }

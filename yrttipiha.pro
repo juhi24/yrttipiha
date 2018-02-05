@@ -23,7 +23,8 @@ DISTFILES += qml/yrttipiha.qml \
     rpm/yrttipiha.spec \
     rpm/yrttipiha.yaml \
     translations/*.ts \
-    yrttipiha.desktop
+    yrttipiha.desktop \
+    qml/pages/jup.py
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128
 

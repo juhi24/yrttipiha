@@ -22,6 +22,10 @@
         <source>Hello Sailors</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>pyyttonia</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SecondPage</name>

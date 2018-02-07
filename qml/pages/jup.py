@@ -1,22 +1,13 @@
 #!/usr/bin/env python3
 # coding: utf-8
-import sys
+import sys.path
 import threading
-from os import path
-pymodules_path = path.realpath('../../pymodules')
-sys.path.append(pymodules_path)
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 try:
     import pyotherside
     DEBUG = False
 except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')
     DEBUG = True
-
-engine = create_engine('sqlite:///../../data/yrttibase.db', echo=False)
-Session = sessionmaker(bind=engine)
-session = Session()
 
 
 def hello():

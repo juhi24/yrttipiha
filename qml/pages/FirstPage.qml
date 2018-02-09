@@ -82,8 +82,8 @@ Page {
                 id: python
                 Component.onCompleted: {
                     addImportPath(Qt.resolvedUrl('.'));
-                    addImportPath(Qt.resolvedUrl('../../pymodules'));
-                    //addImportPath(Qt.resolvedUrl('../../pymodules/yrttikanta'));
+                    addImportPath(Qt.resolvedUrl('../../python'));
+                    //addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
                     setHandler('greeting', function(greets) {
                         greeting.text = greets;
                     })

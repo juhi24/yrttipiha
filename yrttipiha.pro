@@ -26,6 +26,12 @@ DISTFILES += qml/yrttipiha.qml \
     yrttipiha.desktop \
     qml/pages/jup.py
 
+DEPLOYMENT_PATH = /usr/share/$${TARGET}
+
+python.files = python
+python.path = $${DEPLOYMENT_PATH}
+INSTALLS += python
+
 SAILFISHAPP_ICONS = 86x86 108x108 128x128
 
 # to disable building translations every time, comment out the

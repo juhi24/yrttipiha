@@ -15,7 +15,7 @@ try:
 except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')
     DEBUG = True
-from yrttikanta import Session
+import yrttikanta
 from yrttikanta.tables import Herb
 
 
@@ -24,7 +24,7 @@ def hello():
 
 
 def all_herb_names():
-    session = Session()
+    session = yrttikanta.Session()
     q = session.query(Herb.name).order_by(Herb.name)
     return list(map(lambda tup: {'name': tup[0].capitalize()}, q.all()))
 

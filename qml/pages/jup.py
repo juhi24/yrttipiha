@@ -10,12 +10,14 @@ if pymodules_path not in sys.path and False:
 import threading
 try:
     import pyotherside
-    pyotherside.send('sys.path', str(sys.path))
+    #pyotherside.send('sys.path', str(sys.path))
     DEBUG = False
 except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')
     DEBUG = True
 import yrttikanta
+pyotherside.send('yrttikanta', str(dir(yrttikanta)))
+pyotherside.send('yrttikanta', yrttikanta.__file__)
 from yrttikanta.tables import Herb
 
 
@@ -36,7 +38,7 @@ class Database:
         # have to check if it is None.
         self.bgthread = threading.Thread()
         self.bgthread.start()
-        self.session = Session()
+        self.session = yrttikanta.Session()
 
     def threaded_call(self, fun):
         self.bgthread = threading.Thread(target=fun, args=(self.session,))

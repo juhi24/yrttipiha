@@ -82,18 +82,19 @@ Page {
                 id: python
                 Component.onCompleted: {
                     addImportPath(Qt.resolvedUrl('.'));
+                    addImportPath(Qt.resolvedUrl('../../pymodules'));
+                    //addImportPath(Qt.resolvedUrl('../../pymodules/yrttikanta'));
                     setHandler('greeting', function(greets) {
                         greeting.text = greets;
                     })
                     importModule('jup', function () {});
                 }
                 function loadGreeting() {
-                    call('jup.db.hello', function() {});
+                    call('jup.hello', function() {});
                 }
                 onError: {
                     console.log('python error: ' + traceback);
                 }
-
                 onReceived: {
                     console.log('message from python: ' + data);
                 }

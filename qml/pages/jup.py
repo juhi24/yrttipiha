@@ -2,12 +2,15 @@
 # coding: utf-8
 import sys
 from os import path
-pymodules_path = path.realpath('../../pymodules')
-sys.path.append(pymodules_path)
-sys.path.append(path.join(pymodules_path, 'yrttikanta'))
+pkg_root = path.dirname(path.dirname(path.dirname(__file__)))
+pymodules_path = path.join(pkg_root, 'python')
+if pymodules_path not in sys.path and False:
+    sys.path.insert(1, pymodules_path)
+    sys.path.insert(1, path.join(pymodules_path, 'yrttikanta'))
 import threading
 try:
     import pyotherside
+    pyotherside.send('sys.path', str(sys.path))
     DEBUG = False
 except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')

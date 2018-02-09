@@ -30,6 +30,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.4
 
 
 Page {
@@ -40,22 +41,38 @@ Page {
 
     SilicaListView {
         id: listView
-        model: 20
+        model: ListModel {
+            id: namesModel
+        }
+
         anchors.fill: parent
         header: PageHeader {
-            title: qsTr("Nested Page")
+            title: qsTr("All herbs")
         }
         delegate: BackgroundItem {
             id: delegate
 
             Label {
                 x: Theme.horizontalPageMargin
-                text: qsTr("Item") + " " + index
+                text: name
                 anchors.verticalCenter: parent.verticalCenter
                 color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
-            onClicked: console.log("Clicked " + index)
+            onClicked: console.log("Clicked " + name)
         }
         VerticalScrollDecorator {}
+    }
+    Python {
+        id: py
+        Component.onCompleted: {
+            addImportPath(Qt.resolvedUrl('.'));
+            importModule('jup', function () {
+                call('jup.all_herb_names', [], function(result) {
+                    for (var i=0; i<result.length; i++) {
+                        namesModel.append(result[i])
+                    }
+                })
+            })
+        }
     }
 }

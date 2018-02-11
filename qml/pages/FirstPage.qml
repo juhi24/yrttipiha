@@ -81,16 +81,15 @@ Page {
             Python {
                 id: python
                 Component.onCompleted: {
-                    addImportPath(Qt.resolvedUrl('.'));
                     addImportPath(Qt.resolvedUrl('../../python'));
-                    //addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
+                    addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
                     setHandler('greeting', function(greets) {
                         greeting.text = greets;
                     })
-                    importModule('jup', function () {});
+                    importModule('queries', function () {});
                 }
                 function loadGreeting() {
-                    call('jup.hello', function() {});
+                    call('queries.hello', function() {});
                 }
                 onError: {
                     console.log('python error: ' + traceback);

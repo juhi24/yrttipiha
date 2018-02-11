@@ -4,20 +4,14 @@ import sys
 from os import path
 pkg_root = path.dirname(path.dirname(path.dirname(__file__)))
 pymodules_path = path.join(pkg_root, 'python')
-if pymodules_path not in sys.path and False:
-    sys.path.insert(1, pymodules_path)
-    sys.path.insert(1, path.join(pymodules_path, 'yrttikanta'))
 import threading
 try:
     import pyotherside
-    #pyotherside.send('sys.path', str(sys.path))
     DEBUG = False
 except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')
     DEBUG = True
 import yrttikanta
-pyotherside.send('yrttikanta', str(dir(yrttikanta)))
-pyotherside.send('yrttikanta', yrttikanta.__file__)
 from yrttikanta.tables import Herb
 
 

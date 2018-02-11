@@ -65,9 +65,10 @@ Page {
     Python {
         id: py
         Component.onCompleted: {
-            addImportPath(Qt.resolvedUrl('.'));
-            importModule('jup', function () {
-                call('jup.all_herb_names', [], function(result) {
+            addImportPath(Qt.resolvedUrl('../../python'));
+            addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
+            importModule('queries', function () {
+                call('queries.all_herb_names', [], function(result) {
                     for (var i=0; i<result.length; i++) {
                         namesModel.append(result[i])
                     }

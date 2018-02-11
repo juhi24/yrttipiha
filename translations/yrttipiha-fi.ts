@@ -4,6 +4,7 @@
 <context>
     <name>CoverPage</name>
     <message>
+        <location filename="../qml/cover/CoverPage.qml" line="38"/>
         <source>My Cover</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11,19 +12,23 @@
 <context>
     <name>FirstPage</name>
     <message>
+        <location filename="../qml/pages/FirstPage.qml" line="49"/>
+        <source>All herbs</source>
+        <translation>Kaikki yrtit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FirstPage.qml" line="65"/>
+        <source>Yrttipiha</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/FirstPage.qml" line="70"/>
         <source>Hello Sailors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../qml/pages/FirstPage.qml" line="75"/>
         <source>pyyttonia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All herbs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yrttipiha</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

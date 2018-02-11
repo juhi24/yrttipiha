@@ -46,8 +46,8 @@ Page {
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
-                text: qsTr("Show Page 2")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                text: qsTr("All herbs")
+                onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
             }
         }
 
@@ -62,7 +62,7 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
             PageHeader {
-                title: qsTr("UI Template")
+                title: qsTr("Yrttipiha")
             }
             Label {
                 id: greeting

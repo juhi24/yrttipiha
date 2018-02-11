@@ -17,14 +17,14 @@ CONFIG += sailfishapp_qml
 DISTFILES += qml/yrttipiha.qml \
     qml/cover/CoverPage.qml \
     qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/yrttipiha.changes.in \
     rpm/yrttipiha.changes.run.in \
     rpm/yrttipiha.spec \
     rpm/yrttipiha.yaml \
     translations/*.ts \
     yrttipiha.desktop \
-    qml/pages/jup.py
+    qml/pages/jup.py \
+    qml/pages/AllHerbs.qml
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}
 
@@ -42,4 +42,4 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-#TRANSLATIONS += translations/yrttipiha-de.ts
+TRANSLATIONS += translations/yrttipiha-fi.ts

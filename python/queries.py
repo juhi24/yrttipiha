@@ -19,10 +19,22 @@ def hello():
     pyotherside.send('greeting', 'Hello from python!')
 
 
-def all_herb_names():
+def ls_all_herbs():
     session = yrttikanta.Session()
-    q = session.query(Herb.name).order_by(Herb.name)
-    return list(map(lambda tup: {'name': tup[0].capitalize()}, q.all()))
+    q = session.query(Herb.id, Herb.name).order_by(Herb.name)
+    result = list(map(lambda tup: {'id': tup[0],
+                                   'name': tup[1].capitalize()}, q.all()))
+    session.close()
+    return result
+
+
+def herb_page_data(hid):
+    """herb page data by herb id"""
+    session = yrttikanta.Session()
+    herb = session.query(Herb).get(hid)
+    data = herb.to_dict()
+    session.close()
+    return data
 
 
 class Database:

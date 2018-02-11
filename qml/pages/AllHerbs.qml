@@ -58,7 +58,10 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
                 color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
-            onClicked: console.log("Clicked " + name)
+            onClicked: {
+                console.log("Clicked " + name)
+                pageStack.push(Qt.resolvedUrl("Herb.qml"), {"hid": id})
+            }
         }
         VerticalScrollDecorator {}
     }
@@ -68,7 +71,7 @@ Page {
             addImportPath(Qt.resolvedUrl('../../python'));
             addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
             importModule('queries', function () {
-                call('queries.all_herb_names', [], function(result) {
+                call('queries.ls_all_herbs', [], function(result) {
                     for (var i=0; i<result.length; i++) {
                         namesModel.append(result[i])
                     }

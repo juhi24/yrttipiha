@@ -12,10 +12,14 @@ Page {
     Column {
         id: column
         width: page.width
-        spacing: Theme.paddingLarge
+        spacing: Theme.paddingMedium
         PageHeader {
             id: pagetitle
-            title: herb.name
+        }
+        Label {
+            id: familylabel
+            color: Theme.secondaryHighlightColor
+            x: Theme.horizontalPageMargin
         }
     }
     Python {
@@ -26,6 +30,7 @@ Page {
             importModule('queries', function () {
                 call('queries.herb_page_data', [page.hid], function(herb) {
                     pagetitle.title = herb.name
+                    familylabel.text = herb.family + ", " + herb.family_fi
                 })
             })
         }

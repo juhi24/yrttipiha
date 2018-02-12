@@ -13,7 +13,7 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="38"/>
-        <source>My Cover</source>
+        <source>Yrttipiha</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

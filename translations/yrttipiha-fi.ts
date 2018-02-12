@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>AllHerbs</name>
+    <message>
+        <location filename="../qml/pages/AllHerbs.qml" line="50"/>
+        <source>All herbs</source>
+        <translation type="unfinished">Kaikki yrtit</translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="38"/>

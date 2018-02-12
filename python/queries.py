@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 # coding: utf-8
-import sys
 from os import path
 pkg_root = path.dirname(path.dirname(path.dirname(__file__)))
 pymodules_path = path.join(pkg_root, 'python')
 import threading
 try:
     import pyotherside
-    DEBUG = False
+    ON_DEVICE = True
 except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')
-    DEBUG = True
+    ON_DEVICE = False
 import yrttikanta
 from yrttikanta.tables import Herb
 
@@ -31,6 +30,8 @@ def ls_all_herbs():
 def herb_page_data(hid):
     """herb page data by herb id"""
     session = yrttikanta.Session()
+    if ON_DEVICE:
+        pyotherside.send('hid', str(hid))
     herb = session.query(Herb).get(hid)
     data = herb.to_dict()
     session.close()
@@ -51,7 +52,7 @@ class Database:
         self.bgthread.start()
 
     def all_herb_names(self):
-        return self.threaded_call(all_herb_names)
+        return self.threaded_call(ls_all_herbs)
 
 
 db = Database()

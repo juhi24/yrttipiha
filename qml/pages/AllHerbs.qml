@@ -59,7 +59,7 @@ Page {
                 color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
             onClicked: {
-                console.log("Clicked " + name)
+                console.log("Clicked " + id)
                 pageStack.push(Qt.resolvedUrl("Herb.qml"), {"hid": id})
             }
         }

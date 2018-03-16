@@ -33,7 +33,7 @@ def herb_page_data(hid):
     if ON_DEVICE:
         pyotherside.send('hid', str(hid))
     herb = session.query(Herb).get(hid)
-    data = herb.to_dict()
+    data = herb.as_dict()
     session.close()
     return data
 

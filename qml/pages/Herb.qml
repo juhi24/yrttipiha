@@ -9,18 +9,30 @@ Page {
     allowedOrientations: Orientation.All
     // Place our content in a Column.  The PageHeader is always placed at the top
     // of the page, followed by our content.
-    Column {
-        id: column
-        width: page.width
-        spacing: Theme.paddingMedium
-        PageHeader {
-            id: pagetitle
+    SilicaFlickable {
+        anchors.fill: parent
+        contentHeight: column.height + Theme.paddingLarge
+        Column {
+            id: column
+            width: page.width
+            spacing: Theme.paddingMedium
+            anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
+            anchors.right: parent.right; anchors.rightMargin: Theme.paddingMedium
+            PageHeader {
+                id: pagetitle
+            }
+            Label {
+                id: familylabel
+                color: Theme.secondaryHighlightColor
+            }
+            Label {
+                id: sections
+                textFormat: Text.RichText
+                wrapMode: Text.Wrap
+                anchors.left: parent.left; anchors.right: parent.right
+            }
         }
-        Label {
-            id: familylabel
-            color: Theme.secondaryHighlightColor
-            x: Theme.horizontalPageMargin
-        }
+        VerticalScrollDecorator {}
     }
     Python {
         id: py
@@ -31,6 +43,7 @@ Page {
                 call('queries.herb_page_data', [page.hid], function(herb) {
                     pagetitle.title = herb.name
                     familylabel.text = herb.family + ", " + herb.family_fi
+                    sections.text = herb.html
                 })
             })
         }

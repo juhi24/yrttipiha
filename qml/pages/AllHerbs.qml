@@ -39,6 +39,13 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
+    BusyIndicator {
+        id: busy
+        anchors.centerIn: parent
+        size: BusyIndicatorSize.Large
+        running: true
+    }
+
     SilicaListView {
         id: listView
         model: ListModel {
@@ -75,6 +82,7 @@ Page {
                     for (var i=0; i<result.length; i++) {
                         namesModel.append(result[i])
                     }
+                    busy.running = false
                 })
             })
         }

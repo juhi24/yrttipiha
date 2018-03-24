@@ -4,7 +4,7 @@
 <context>
     <name>AllHerbs</name>
     <message>
-        <location filename="../qml/pages/AllHerbs.qml" line="50"/>
+        <location filename="../qml/pages/AllHerbs.qml" line="57"/>
         <source>All herbs</source>
         <translation type="unfinished">Kaikki yrtit</translation>
     </message>
@@ -12,7 +12,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="38"/>
+        <location filename="../qml/cover/CoverPage.qml" line="40"/>
         <source>Yrttipiha</source>
         <translation type="unfinished"></translation>
     </message>

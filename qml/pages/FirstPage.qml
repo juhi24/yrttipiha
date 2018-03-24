@@ -49,6 +49,10 @@ Page {
                 text: qsTr("All herbs")
                 onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
             }
+            MenuItem {
+                text: qsTr("Search")
+                onClicked: pageStack.push(Qt.resolvedUrl("SearchPage.qml"))
+            }
         }
 
         // Tell SilicaFlickable the height of its content.

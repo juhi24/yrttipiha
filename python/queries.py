@@ -18,11 +18,26 @@ def hello():
     pyotherside.send('greeting', 'Hello from python!')
 
 
+def _q_result_herbs(q):
+    """all results of a query as a dictionary"""
+    return list(map(lambda tup: {'id': tup[0],
+                                 'name': tup[1].capitalize()}, q.all()))
+
 def ls_all_herbs():
+    """List all herbs in database."""
     session = yrttikanta.Session()
     q = session.query(Herb.id, Herb.name).order_by(Herb.name)
-    result = list(map(lambda tup: {'id': tup[0],
-                                   'name': tup[1].capitalize()}, q.all()))
+    result = _q_result_herbs(q)
+    session.close()
+    return result
+
+
+def search_herb(search_str):
+    """Search herb from database."""
+    session = yrttikanta.Session()
+    cond = Herb.name.like('%{}%'.format(search_str.lower()))
+    q = session.query(Herb.id, Herb.name).filter(cond).order_by(Herb.name)
+    result = _q_result_herbs(q)
     session.close()
     return result
 
@@ -57,4 +72,4 @@ class Database:
         return self.threaded_call(ls_all_herbs)
 
 
-db = Database()
+#db = Database()

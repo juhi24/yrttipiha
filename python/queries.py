@@ -11,22 +11,31 @@ except ModuleNotFoundError:
     print('PyOtherSide not found. Entering debug mode.')
     ON_DEVICE = False
 import yrttikanta
-from yrttikanta.tables import Herb
+from yrttikanta.tables import Herb, AltName
 
 
 def hello():
     pyotherside.send('greeting', 'Hello from python!')
 
 
-def _q_result_herbs(q):
+def _q_result_herbs(herbs):
     """all results of a query as a dictionary"""
-    return list(map(lambda tup: {'id': tup[0],
-                                 'name': tup[1].capitalize()}, q.all()))
+    return list(map(lambda h: {'id': h.id,
+                               'name': h.name.capitalize()}, herbs))
+
+
+def _q_result_alts(alts):
+    """all results of an alt name query as dict"""
+    herbs = []
+    for alt in alts:
+        herbs.extend(alt.herbs)
+    return _q_result_herbs(herbs)
+
 
 def ls_all_herbs():
     """List all herbs in database."""
     session = yrttikanta.Session()
-    q = session.query(Herb.id, Herb.name).order_by(Herb.name)
+    q = session.query(Herb).order_by(Herb.name)
     result = _q_result_herbs(q)
     session.close()
     return result
@@ -35,11 +44,16 @@ def ls_all_herbs():
 def search_herb(search_str):
     """Search herb from database."""
     session = yrttikanta.Session()
-    cond = Herb.name.like('%{}%'.format(search_str.lower()))
-    q = session.query(Herb.id, Herb.name).filter(cond).order_by(Herb.name)
-    result = _q_result_herbs(q)
+    qstr = '%{}%'.format(search_str.lower())
+    cond = Herb.name.like(qstr)
+    cond_alt = AltName.name.like(qstr)
+    q = session.query(Herb).filter(cond).order_by(Herb.name)
+    # TODO: fix slow alt search
+    q_alt = session.query(AltName).filter(cond_alt).order_by(AltName.name)
+    result = _q_result_herbs(q.all())
+    result.extend(_q_result_alts(q_alt.all()))
     session.close()
-    return result
+    return list({v['id']:v for v in result}.values()) # unique ids
 
 
 def herb_page_data(hid):

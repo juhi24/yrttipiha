@@ -33,5 +33,20 @@
         <source>Yrttipiha</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchPage</name>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name or symptom</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

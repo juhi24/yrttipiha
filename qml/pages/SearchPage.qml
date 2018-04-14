@@ -9,14 +9,14 @@ Page {
 
     property string searchString
     onSearchStringChanged: {
-        searchPy.update()
+        searchPy.updateSearchQuery();
     }
 
     BusyIndicator {
         id: searchBusy
         anchors.centerIn: parent
         size: BusyIndicatorSize.Large
-        running: true
+        running: false
     }
 
     SilicaListView {
@@ -26,7 +26,7 @@ Page {
 
         header: Column{
             id: headerContainer
-            width: page.width
+            width: searchPage.width
 
             PageHeader {
                 title: qsTr("Search")
@@ -38,7 +38,7 @@ Page {
                 placeholderText: qsTr("Name or symptom")
 
                 Binding {
-                    target: page
+                    target: searchPage
                     property: "searchString"
                     value: field.text.toLowerCase().trim()
                 }
@@ -77,22 +77,22 @@ Page {
             addImportPath(Qt.resolvedUrl('../../python'));
             addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
             importModule('queries', function () {});
-            function update() {
-                call('queries.search_herb', [searchString], function(result) {
-                    searchBusy.running = true
-                    searchModel.clear()
-                    for (var i=0; i<result.length; i++) {
-                        searchModel.append(result[i])
-                    }
-                    searchBusy.running = false
-                })
-            }
-            onError: {
-                console.log('python error: ' + traceback);
-            }
-            onReceived: {
-                console.log('message from python: ' + data);
-            }
+        }
+        function updateSearchQuery() {
+            call('queries.search_herb', [searchString], function(result) {
+                searchBusy.running = true
+                searchModel.clear()
+                for (var i=0; i<result.length; i++) {
+                    searchModel.append(result[i])
+                }
+                searchBusy.running = false
+            })
+        }
+        onError: {
+            console.log('python error: ' + traceback);
+        }
+        onReceived: {
+            console.log('message from python: ' + data);
         }
     }
 }

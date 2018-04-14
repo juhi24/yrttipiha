@@ -22,7 +22,13 @@ Page {
                 id: pagetitle
             }
             Label {
-                id: familylabel
+                id: altNamesLabel
+                wrapMode: Text.Wrap
+                color: Theme.highlightColor
+                anchors.left: parent.left; anchors.right: parent.right
+            }
+            Label {
+                id: familyLabel
                 color: Theme.secondaryHighlightColor
             }
             Label {
@@ -42,7 +48,8 @@ Page {
             importModule('queries', function () {
                 call('queries.herb_page_data', [page.hid], function(herb) {
                     pagetitle.title = herb.name
-                    familylabel.text = herb.family + ", " + herb.family_fi
+                    altNamesLabel.text = herb.alt_names.join(', ')
+                    familyLabel.text = herb.family + ", " + herb.family_fi
                     sections.text = herb.html
                 })
             })

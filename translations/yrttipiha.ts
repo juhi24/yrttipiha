@@ -26,15 +26,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>All herbs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Yrttipiha</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -46,6 +38,14 @@
     </message>
     <message>
         <source>Name or symptom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All herbs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

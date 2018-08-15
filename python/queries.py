@@ -65,6 +65,7 @@ def herb_page_data(hid):
     data = herb.as_dict()
     if ON_DEVICE:
         pyotherside.send('keys', str(data.keys()))
+        pyotherside.send('urls', str(data['img_paths']))
     session.close()
     return data
 

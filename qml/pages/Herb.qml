@@ -21,6 +21,12 @@ Page {
             PageHeader {
                 id: pagetitle
             }
+            Image {
+                id: mainFigure
+                width: parent.width
+                anchors.horizontalCenter: parent.horizontalCenter
+                fillMode: Image.PreserveAspectFit
+            }
             Label {
                 id: altNamesLabel
                 wrapMode: Text.Wrap
@@ -51,6 +57,7 @@ Page {
                     altNamesLabel.text = herb.alt_names.join(', ')
                     familyLabel.text = herb.family + ", " + herb.family_fi
                     sections.text = herb.html
+                    mainFigure.source = herb.img_paths[0]
                 })
             })
         }

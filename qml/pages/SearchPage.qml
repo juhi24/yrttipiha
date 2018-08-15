@@ -24,6 +24,18 @@ Page {
 
         anchors.fill: parent
 
+        // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("All herbs")
+                onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
+            }
+            MenuItem {
+                text: qsTr("Debug")
+                onClicked: pageStack.push(Qt.resolvedUrl("FirstPage.qml"))
+            }
+        }
+
         header: Column{
             id: headerContainer
             width: searchPage.width

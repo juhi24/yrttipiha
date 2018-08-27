@@ -1,5 +1,5 @@
-Name: yrttipiha
-Summary: Yrttipiha
+Name: harbour-yrttipiha
+Summary: Yrttipiha herb database
 Version: 0.0.1
 Release: 1
 # The contents of the Group field should be one of the groups listed here:
@@ -13,7 +13,7 @@ License: LICENSE
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |
-  Short description of my Sailfish OS Application
+  Yrttipiha is a herb database based on yrttitarha.fi
 Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution

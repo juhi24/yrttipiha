@@ -27,12 +27,12 @@ Page {
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
-                text: qsTr("All herbs")
-                onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
             MenuItem {
-                text: qsTr("Debug")
-                onClicked: pageStack.push(Qt.resolvedUrl("FirstPage.qml"))
+                text: qsTr("All herbs")
+                onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
             }
         }
 
@@ -47,7 +47,7 @@ Page {
             SearchField {
                 id: field
                 width: parent.width
-                placeholderText: qsTr("Name or symptom")
+                placeholderText: qsTr("Herb name")
 
                 Binding {
                     target: searchPage

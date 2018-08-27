@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-Icon=yrttipiha
-Exec=sailfish-qml yrttipiha
-Name=yrttipiha
+Icon=harbour-yrttipiha
+Exec=sailfish-qml harbour-yrttipiha
+Name=Yrttipiha
 # translation example:
 # your app name in German locale (de)
 #

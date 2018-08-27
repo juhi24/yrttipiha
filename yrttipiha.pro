@@ -10,27 +10,34 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = yrttipiha
+TARGET = harbour-yrttipiha
 
 CONFIG += sailfishapp_qml
 
-DISTFILES += qml/yrttipiha.qml \
+DISTFILES += \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    rpm/yrttipiha.changes.in \
-    rpm/yrttipiha.changes.run.in \
-    rpm/yrttipiha.spec \
-    rpm/yrttipiha.yaml \
+    rpm/harbour-yrttipiha.changes.in \
+    rpm/harbour-yrttipiha.changes.run.in \
     translations/*.ts \
-    yrttipiha.desktop \
-    qml/pages/jup.py \
-    qml/pages/AllHerbs.qml
+    qml/pages/AboutPage.qml \
+    qml/pages/AllHerbs.qml \
+    rpm/harbour-yrttipiha.spec \
+    rpm/harbour-yrttipiha.yaml \
+    harbour-yrttipiha.desktop \
+    qml/harbour-yrttipiha.qml \
+    qml/components/AboutLabel.qml \
+    qml/components/AboutLabelSmall.qml
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}
 
 python.files = python
+unix:python.extra = rm -Rf /home/mersdk/share/koodi/sfos-projects/harbour-yrttipiha/python/yrttikanta/.git
 python.path = $${DEPLOYMENT_PATH}
 INSTALLS += python
+
+img.files = img
+img.path = $${DEPLOYMENT_PATH}
+INSTALLS += img
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128
 
@@ -42,4 +49,4 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/yrttipiha-fi.ts
+TRANSLATIONS += translations/harbour-yrttipiha-fi.ts

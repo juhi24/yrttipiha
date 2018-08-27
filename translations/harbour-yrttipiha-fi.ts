@@ -60,7 +60,7 @@
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="30"/>
         <source>About</source>
-        <translation type="unfinished">Tietoja</translation>
+        <translation>Tietoja</translation>
     </message>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="50"/>

@@ -16,7 +16,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="61"/>
         <source>This app is based on material from &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha&lt;/a&gt; herb database by Osara Agricultural College, and published under their permission.</source>
-        <translation>Tämä sovellus perustuu Länsi-Pirkanmaan Koulutuskuntayhtymän (nyk. Sastamalan koulutuskuntayhtymä) ja sen hallinnoiman Ammatti-instituutti Iisakin julkaisemaan &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha-tietokantaan&lt;/a&gt;. Tietokannan materiaalia on käytetty sen alkuperäisen julkaisijan luvalla.</translation>
+        <translation>Tämä sovellus perustuu SASKY koulutuskuntayhtymän julkaisemaan &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha-tietokantaan&lt;/a&gt;. Tietokannan materiaalia on käytetty sen alkuperäisen julkaisijan luvalla.</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="65"/>
@@ -48,6 +48,14 @@
         <location filename="../qml/cover/CoverPage.qml" line="40"/>
         <source>Yrttipiha</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Herb</name>
+    <message>
+        <location filename="../qml/pages/Herb.qml" line="63"/>
+        <source> family (</source>
+        <translation>-heimo (</translation>
     </message>
 </context>
 <context>

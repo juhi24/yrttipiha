@@ -28,14 +28,18 @@ Page {
                 fillMode: Image.PreserveAspectFit
             }
             Label {
-                id: altNamesLabel
-                wrapMode: Text.Wrap
-                color: Theme.highlightColor
-                anchors.left: parent.left; anchors.right: parent.right
+                id: latinLabel
+                color: Theme.secondaryHighlightColor
             }
             Label {
                 id: familyLabel
                 color: Theme.secondaryHighlightColor
+            }
+            Label {
+                id: altNamesLabel
+                wrapMode: Text.Wrap
+                color: Theme.highlightColor
+                anchors.left: parent.left; anchors.right: parent.right
             }
             Label {
                 id: sections
@@ -55,7 +59,8 @@ Page {
                 call('queries.herb_page_data', [page.hid], function(herb) {
                     pagetitle.title = herb.name
                     altNamesLabel.text = herb.alt_names.join(', ')
-                    familyLabel.text = herb.family + ", " + herb.family_fi
+                    latinLabel.text = herb.name_latin
+                    familyLabel.text = herb.family + qsTr(" family (") + herb.family_fi + ")"
                     sections.text = herb.html
                     mainFigure.source = herb.img_paths[0]
                 })

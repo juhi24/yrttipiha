@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 17.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="230.0009"
+   height="236.83569"
+   viewBox="0 0 230.00091 236.83569"
+   enable-background="new 0 0 86 86"
+   xml:space="preserve"
+   id="svg33"
+   sodipodi:docname="cover_bottom.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/jussi24/koodi/sfos-projects/harbour-yrttipiha/icons/86x86/harbour-yrttipiha.png"
+   inkscape:export-xdpi="96.22377"
+   inkscape:export-ydpi="96.22377"><metadata
+   id="metadata39"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs37" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1366"
+   inkscape:window-height="704"
+   id="namedview35"
+   showgrid="false"
+   inkscape:zoom="1.4142136"
+   inkscape:cx="175.22373"
+   inkscape:cy="109.65892"
+   inkscape:window-x="0"
+   inkscape:window-y="27"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="layer1" />
+<g
+   id="Layer_2"
+   display="none"
+   style="display:none"
+   transform="translate(67.965133,80.146452)">
+</g>
+<g
+   id="Layer_1"
+   transform="translate(67.965133,80.146452)">
+	
+		<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="1277.1947"
+   y1="602.01941"
+   x2="1359.9706"
+   y2="569.1673"
+   gradientTransform="rotate(-90,423.0688,939.6071)">
+		<stop
+   offset="0"
+   style="stop-color:#254683;stop-opacity:1"
+   id="stop3" />
+		<stop
+   offset="0.9897"
+   style="stop-color:#08740c;stop-opacity:1"
+   id="stop5" />
+	</linearGradient>
+	
+	
+	
+	
+	
+	
+<g
+   transform="matrix(-0.09903369,0.03131547,-0.03131547,-0.09903369,117.46687,88.367412)"
+   id="layer1"
+   inkscape:label="Layer 1"><path
+     sodipodi:nodetypes="cssscssssssssscc"
+     inkscape:connector-curvature="0"
+     id="path2996"
+     d="m 1782.7889,-126.14848 c -99.8777,83.909671 -200.73,166.673948 -299.6335,251.72942 C 1256.215,320.74602 1048.6151,303.14217 871.28857,218.90859 612.91154,96.174589 366.18685,106.7758 128.68216,212.70267 c -344.3016,153.55823 -571.4353,396.9726 -674.78531,641.09268 -121.28736,135.08012 -268.52441,332.04765 -325.32948,479.16085 -5.51396,14.2802 -0.52564,35.1536 11.66002,44.4188 173.24735,131.7228 345.86945,159.3389 536.60505,206.7662 82.10143,20.4148 158.79039,61.6648 242.180634,75.93 312.646336,53.4824 604.017796,-12.5695 871.949506,-105.6986 21.16789,-7.3576 43.10701,-31.2636 63.67495,-40.1617 21.26933,-9.2014 37.25422,-7.2881 57.22849,-18.9087 C 1175.1746,1342.1165 1330.1893,979.92499 1356.8415,791.68242 1394.0663,528.76576 1522.0446,371.8148 1658.1077,217.92075 1719.1302,148.90113 1794.2859,93.803677 1862.3752,31.745172 1814.754,-12.91742 1799.6627,-70.090693 1782.7889,-126.14848 Z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.69925237" /></g></g>
+</svg>

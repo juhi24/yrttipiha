@@ -26,7 +26,8 @@ DISTFILES += \
     harbour-yrttipiha.desktop \
     qml/harbour-yrttipiha.qml \
     qml/components/AboutLabel.qml \
-    qml/components/AboutLabelSmall.qml
+    qml/components/AboutLabelSmall.qml \
+    qml/components/CoverImage.qml
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}
 

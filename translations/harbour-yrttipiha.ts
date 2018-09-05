@@ -36,13 +36,6 @@
     </message>
 </context>
 <context>
-    <name>CoverPage</name>
-    <message>
-        <source>Yrttipiha</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Herb</name>
     <message>
         <source> family (</source>

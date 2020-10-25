@@ -1,3 +1,6 @@
 [submodule "python/yrttikanta"]
 	path = python/yrttikanta
 	url = git@github.com:juhi24/yrttikanta.git
+[submodule "python/sqlalchemy"]
+	path = python/sqlalchemy
+	url = git@github.com:sqlalchemy/sqlalchemy.git

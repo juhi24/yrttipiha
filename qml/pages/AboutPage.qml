@@ -37,7 +37,7 @@ Page {
             AboutLabelSmall {
                 anchors.left: undefined; anchors.right: undefined
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: "v0.3.0"
+                text: "v0.3.2"
             }
             AboutLabel {
                 text: qsTr("This app is based on material from <a href=\"http://yrttitarha.fi\">Yrttitarha</a> herb database by Osara Agricultural College, and published under their permission.")

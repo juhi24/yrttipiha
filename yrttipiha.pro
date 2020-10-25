@@ -31,7 +31,7 @@ DISTFILES += \
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}
 
-python.files = python/sqlalchemy python/queries.py
+python.files = python/sqlalchemy/lib/sqlalchemy python/queries.py
 python.files += python/yrttikanta/yrttikanta
 python.path = $${DEPLOYMENT_PATH}/python
 INSTALLS += python

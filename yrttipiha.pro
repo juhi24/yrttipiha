@@ -31,9 +31,9 @@ DISTFILES += \
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}
 
-python.files = python
-unix:python.extra = rm -Rf /home/mersdk/share/koodi/sfos-projects/harbour-yrttipiha/python/yrttikanta/.git
-python.path = $${DEPLOYMENT_PATH}
+python.files = python/sqlalchemy python/queries.py
+python.files += python/yrttikanta/yrttikanta
+python.path = $${DEPLOYMENT_PATH}/python
 INSTALLS += python
 
 img.files = img

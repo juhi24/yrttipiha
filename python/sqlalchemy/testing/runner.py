@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # testing/runner.py
 # Copyright (C) 2005-2018 the SQLAlchemy authors and contributors
 # <see AUTHORS file>

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # coding: utf-8
 from os import path
 pkg_root = path.dirname(path.dirname(path.dirname(__file__)))

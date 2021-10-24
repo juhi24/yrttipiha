@@ -49,6 +49,9 @@ Page {
                 width: parent.width
                 placeholderText: qsTr("Herb name")
 
+                EnterKey.iconSource: "image://theme/icon-m-enter-close"
+                EnterKey.onClicked: focus = false
+
                 Binding {
                     target: searchPage
                     property: "searchString"

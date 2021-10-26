@@ -21,11 +21,22 @@ Page {
             PageHeader {
                 id: pagetitle
             }
-            Image {
-                id: mainFigure
-                width: parent.width
-                anchors.horizontalCenter: parent.horizontalCenter
-                fillMode: Image.PreserveAspectFit
+            SlideshowView {
+                id: imageSlides
+                width: page.width
+                itemWidth: width
+                height: 500
+                clip: true
+                orientation: Qt.Horizontal
+                model: ListModel {
+                    id: figsModel
+                }
+                delegate: Image {
+                    id: fig
+                    width: imageSlides.itemWidth
+                    fillMode: Image.PreserveAspectFit
+                    source: src
+                }
             }
             Label {
                 id: latinLabel
@@ -62,7 +73,9 @@ Page {
                     latinLabel.text = herb.name_latin
                     familyLabel.text = herb.family + qsTr(" family (") + herb.family_fi + ")"
                     sections.text = herb.html
-                    mainFigure.source = herb.img_paths[0]
+                    for (var i=0; i<herb.img_paths.length; i++) {
+                        figsModel.append({src: herb.img_paths[i]})
+                    }
                 })
             })
         }

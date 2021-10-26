@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.3
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.4
 
@@ -23,19 +23,47 @@ Page {
             }
             SlideshowView {
                 id: imageSlides
+                z: 50
                 width: page.width
                 itemWidth: width
                 height: 500
-                clip: true
+                clip: false
                 orientation: Qt.Horizontal
                 model: ListModel {
                     id: figsModel
                 }
                 delegate: Image {
                     id: fig
+                    property bool isZoomed: false
                     width: imageSlides.itemWidth
                     fillMode: Image.PreserveAspectFit
                     source: src
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            figAnimation.start()
+                            isZoomed = !isZoomed
+                        }
+                    }
+                    ParallelAnimation {
+                        id: figAnimation
+                        NumberAnimation {
+                            id: zoomAnimation
+                            target: fig
+                            easing.type: Easing.InOutQuad
+                            properties: "scale"
+                            to: isZoomed ? 1 : 2
+                            duration: 200
+                        }
+                        NumberAnimation {
+                            id: moveAnimation
+                            target: fig
+                            easing.type: Easing.InOutQuad
+                            properties: "y"
+                            to: isZoomed ? imageSlides.height/2 - fig.height/2 : fig.height/2
+                            duration: 200
+                        }
+                    }
                 }
             }
             Label {

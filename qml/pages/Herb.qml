@@ -1,4 +1,4 @@
-import QtQuick 2.3
+import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.4
 
@@ -21,21 +21,18 @@ Page {
             PageHeader {
                 id: pagetitle
             }
-            SlideshowView {
+            PagedView {
                 id: imageSlides
                 z: 50
                 width: page.width
-                itemWidth: width
-                height: 500
+                height: 550
                 clip: false
-                orientation: Qt.Horizontal
                 model: ListModel {
                     id: figsModel
                 }
                 delegate: Image {
                     id: fig
                     property bool isZoomed: false
-                    width: imageSlides.itemWidth
                     fillMode: Image.PreserveAspectFit
                     source: src
                     MouseArea {
@@ -43,6 +40,8 @@ Page {
                         onClicked: {
                             figAnimation.start()
                             isZoomed = !isZoomed
+                            // Lock while zoomed
+                            imageSlides.interactive = !imageSlides.interactive
                         }
                     }
                     ParallelAnimation {

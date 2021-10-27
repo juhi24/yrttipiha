@@ -45,7 +45,7 @@
 <context>
     <name>Herb</name>
     <message>
-        <location filename="../qml/pages/Herb.qml" line="102"/>
+        <location filename="../qml/pages/Herb.qml" line="101"/>
         <source> family (</source>
         <translation>-heimo (</translation>
     </message>

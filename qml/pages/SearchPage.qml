@@ -8,15 +8,12 @@ Page {
     allowedOrientations: Orientation.All
 
     property string searchString
+    property int changeCounter
     onSearchStringChanged: {
+        changeCounter++;
+        searchPullDown.busy = true;
+        console.log('Pending searches: ' + changeCounter);
         searchPy.updateSearchQuery();
-    }
-
-    BusyIndicator {
-        id: searchBusy
-        anchors.centerIn: parent
-        size: BusyIndicatorSize.Large
-        running: false
     }
 
     SilicaListView {
@@ -26,6 +23,7 @@ Page {
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+            id: searchPullDown
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
@@ -95,12 +93,15 @@ Page {
         }
         function updateSearchQuery() {
             call('queries.search_herb', [searchString], function(result) {
-                searchBusy.running = true
-                searchModel.clear()
+                console.log('Begin search: ' + searchString);
+                searchModel.clear();
                 for (var i=0; i<result.length; i++) {
-                    searchModel.append(result[i])
+                    searchModel.append(result[i]);
                 }
-                searchBusy.running = false
+                searchPage.changeCounter--;
+                if (changeCounter < 1) {
+                    searchPullDown.busy = false;
+                }
             })
         }
         onError: {

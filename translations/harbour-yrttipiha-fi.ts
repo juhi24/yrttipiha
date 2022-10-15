@@ -53,22 +53,22 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="34"/>
+        <location filename="../qml/pages/SearchPage.qml" line="32"/>
         <source>All herbs</source>
         <translation>Kaikki yrtit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="30"/>
+        <location filename="../qml/pages/SearchPage.qml" line="28"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="50"/>
+        <location filename="../qml/pages/SearchPage.qml" line="48"/>
         <source>Herb name</source>
         <translation>Yrtin nimi tai nimitys</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="44"/>
+        <location filename="../qml/pages/SearchPage.qml" line="42"/>
         <source>Search</source>
         <translation>Etsi</translation>
     </message>

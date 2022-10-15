@@ -8,7 +8,11 @@ Page {
     allowedOrientations: Orientation.All
 
     property string searchString
+    property int changeCounter
     onSearchStringChanged: {
+        changeCounter++;
+        searchPullDown.busy = true;
+        console.log('Pending searches: ' + changeCounter);
         searchPy.updateSearchQuery();
     }
 
@@ -89,12 +93,15 @@ Page {
         }
         function updateSearchQuery() {
             call('queries.search_herb', [searchString], function(result) {
-                searchPullDown.busy = true;
+                console.log('Begin search: ' + searchString);
                 searchModel.clear();
                 for (var i=0; i<result.length; i++) {
                     searchModel.append(result[i]);
                 }
-                searchPullDown.busy = false;
+                searchPage.changeCounter--;
+                if (changeCounter < 1) {
+                    searchPullDown.busy = false;
+                }
             })
         }
         onError: {

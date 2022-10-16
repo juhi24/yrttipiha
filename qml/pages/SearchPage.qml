@@ -28,10 +28,6 @@ Page {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
-            MenuItem {
-                text: qsTr("All herbs")
-                onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
-            }
         }
 
         header: Column{
@@ -77,6 +73,7 @@ Page {
                 textFormat: Text.StyledText
                 text: Theme.highlightText(model.name, searchString, Theme.highlightColor)
             }
+
             onClicked: {
                 console.log("Clicked " + id)
                 pageStack.push(Qt.resolvedUrl("Herb.qml"), {"hid": id})
@@ -86,27 +83,51 @@ Page {
     }
     Python {
         id: searchPy
+
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../../python'));
             addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
             importModule('queries', function () {});
+            searchPage.changeCounter++;
+            getAllHerbs();
         }
+
         function updateSearchQuery() {
-            call('queries.search_herb', [searchString], function(result) {
-                console.log('Begin search: ' + searchString);
+            if (searchString) {
+                call('queries.search_herb', [searchString], function(result) {
+                    searchModel.clear();
+                    console.log('Begin search: ' + searchString);
+                    for (var i=0; i<result.length; i++) {
+                        searchModel.append(result[i]);
+                    }
+                    checkBusy();
+                })
+            } else {
+                getAllHerbs();
+            }
+        }
+
+        function checkBusy() {
+            searchPage.changeCounter--;
+            if (changeCounter < 1) {
+                searchPullDown.busy = false;
+            }
+        }
+
+        function getAllHerbs() {
+            call('queries.ls_all_herbs', [], function(result) {
                 searchModel.clear();
                 for (var i=0; i<result.length; i++) {
                     searchModel.append(result[i]);
                 }
-                searchPage.changeCounter--;
-                if (changeCounter < 1) {
-                    searchPullDown.busy = false;
-                }
+                checkBusy();
             })
         }
+
         onError: {
             console.log('python error: ' + traceback);
         }
+
         onReceived: {
             console.log('message from python: ' + data);
         }

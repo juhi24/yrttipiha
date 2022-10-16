@@ -29,13 +29,6 @@
     </message>
 </context>
 <context>
-    <name>AllHerbs</name>
-    <message>
-        <source>All herbs</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Herb</name>
     <message>
         <source> family (</source>
@@ -46,10 +39,6 @@
     <name>SearchPage</name>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All herbs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

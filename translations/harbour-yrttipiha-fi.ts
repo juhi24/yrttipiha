@@ -35,14 +35,6 @@
     </message>
 </context>
 <context>
-    <name>AllHerbs</name>
-    <message>
-        <location filename="../qml/pages/AllHerbs.qml" line="27"/>
-        <source>All herbs</source>
-        <translation>Kaikki yrtit</translation>
-    </message>
-</context>
-<context>
     <name>Herb</name>
     <message>
         <location filename="../qml/pages/Herb.qml" line="101"/>
@@ -53,22 +45,17 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="32"/>
-        <source>All herbs</source>
-        <translation>Kaikki yrtit</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/SearchPage.qml" line="28"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="48"/>
+        <location filename="../qml/pages/SearchPage.qml" line="44"/>
         <source>Herb name</source>
         <translation>Yrtin nimi tai nimitys</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="42"/>
+        <location filename="../qml/pages/SearchPage.qml" line="38"/>
         <source>Search</source>
         <translation>Etsi</translation>
     </message>

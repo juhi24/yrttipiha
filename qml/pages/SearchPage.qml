@@ -28,10 +28,6 @@ Page {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
-            MenuItem {
-                text: qsTr("All herbs")
-                onClicked: pageStack.push(Qt.resolvedUrl("AllHerbs.qml"))
-            }
         }
 
         header: Column{

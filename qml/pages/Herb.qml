@@ -16,8 +16,12 @@ Page {
             id: column
             width: page.width
             spacing: Theme.paddingMedium
-            anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
-            anchors.right: parent.right; anchors.rightMargin: Theme.paddingMedium
+            anchors {
+                left: parent.left
+                leftMargin: Theme.horizontalPageMargin
+                right: parent.right
+                rightMargin: Theme.horizontalPageMargin
+            }
             PageHeader {
                 id: pagetitle
             }
@@ -27,6 +31,10 @@ Page {
                 width: page.width
                 height: 550
                 clip: false
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                }
                 model: ListModel {
                     id: figsModel
                 }

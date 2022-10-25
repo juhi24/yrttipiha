@@ -66,8 +66,14 @@ Page {
             id: delegate
 
             Label {
-                x: Theme.paddingLarge
-                anchors.verticalCenter: parent.verticalCenter
+                id: herbName
+                anchors {
+                    left: parent.left
+                    leftMargin: Theme.horizontalPageMargin
+                    right: parent.right
+                    rightMargin: Theme.horizontalPageMargin
+                    verticalCenter: parent.verticalCenter
+                }
                 color: searchString.length > 0 ? (highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor)
                                                : (highlighted ? Theme.highlightColor : Theme.primaryColor)
                 textFormat: Text.StyledText

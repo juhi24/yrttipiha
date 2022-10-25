@@ -1,11 +1,11 @@
 Name: harbour-yrttipiha
 Summary: Yrttipiha herb database
-Version: 0.3.2
+Version: 0.3.3
 Release: 2
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Qt/Qt
-URL: http://example.org/
+URL: https://j24.fi/yrttipiha/
 BuildArch: noarch
 License: LICENSE
 # This must be generated before uploading a package to a remote build service.

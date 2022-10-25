@@ -12,8 +12,12 @@ Page {
         Column {
             id: mainColumn
             spacing: Theme.paddingMedium
-            anchors.left: parent.left; anchors.leftMargin: Theme.paddingMedium
-            anchors.right: parent.right; anchors.rightMargin: Theme.paddingMedium
+            anchors {
+                left: parent.left
+                leftMargin: Theme.horizontalPageMargin
+                right: parent.right
+                rightMargin: Theme.horizontalPageMargin
+            }
             PageHeader {
                 title: qsTr("About")
             }
@@ -37,7 +41,7 @@ Page {
             AboutLabelSmall {
                 anchors.left: undefined; anchors.right: undefined
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: "v0.3.2"
+                text: "v0.3.3"
             }
             AboutLabel {
                 text: qsTr("This app is based on material from <a href=\"http://yrttitarha.fi\">Yrttitarha</a> herb database by Osara Agricultural College, and published under their permission.")
@@ -61,8 +65,12 @@ Page {
 
         Column {
             id: buttonsColumn
-            anchors.top: mainColumn.bottom; anchors.topMargin: Theme.paddingLarge
-            anchors.left: parent.left; anchors.right: parent.right
+            anchors {
+                top: mainColumn.bottom
+                topMargin: Theme.paddingLarge
+                left: parent.left
+                right: parent.right
+            }
 
             //            BackgroundItem {
             //                anchors.left: parent.left; anchors.right: parent.right

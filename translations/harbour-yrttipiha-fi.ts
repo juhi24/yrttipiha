@@ -4,32 +4,32 @@
 <context>
     <name>AboutPage</name>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="18"/>
+        <location filename="../qml/pages/AboutPage.qml" line="22"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="34"/>
+        <location filename="../qml/pages/AboutPage.qml" line="38"/>
         <source>Yrttipiha</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="43"/>
+        <location filename="../qml/pages/AboutPage.qml" line="47"/>
         <source>This app is based on material from &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha&lt;/a&gt; herb database by Osara Agricultural College, and published under their permission.</source>
         <translation>Tämä sovellus perustuu SASKY koulutuskuntayhtymän julkaisemaan &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha-tietokantaan&lt;/a&gt;. Tietokannan materiaalia on käytetty sen alkuperäisen julkaisijan luvalla.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="47"/>
+        <location filename="../qml/pages/AboutPage.qml" line="51"/>
         <source>Yrttipiha was developed by Jussi Tiira and published under the &lt;a href=&quot;https://github.com/juhi24/yrttipiha/blob/master/LICENSE&quot;&gt;MIT License&lt;/a&gt;.</source>
         <translation>Yrttipiha-sovelluksen on luonut Jussi Tiira ja se on julkaistu &lt;a href=&quot;https://github.com/juhi24/yrttipiha/blob/master/LICENSE&quot;&gt;MIT-lisenssillä&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="52"/>
+        <location filename="../qml/pages/AboutPage.qml" line="56"/>
         <source>Source code</source>
         <translation>Lähdekoodi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="57"/>
+        <location filename="../qml/pages/AboutPage.qml" line="61"/>
         <source>About Yrttitarha</source>
         <translation>Tietoja Yrttitarha-projektista</translation>
     </message>
@@ -37,7 +37,7 @@
 <context>
     <name>Herb</name>
     <message>
-        <location filename="../qml/pages/Herb.qml" line="101"/>
+        <location filename="../qml/pages/Herb.qml" line="110"/>
         <source> family (</source>
         <translation>-heimo (</translation>
     </message>

@@ -38,16 +38,19 @@ Page {
                     text: qsTr("Yrttipiha")
                 }
             }
-            AboutLabelSmall {
-                anchors.left: undefined; anchors.right: undefined
+            Label {
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: "v0.3.3"
+                font.pixelSize: Theme.fontSizeExtraSmall
+                color: Theme.secondaryHighlightColor
             }
-            AboutLabel {
+            MultilineLabel {
+                font.pixelSize: Theme.fontSizeSmall
                 text: qsTr("This app is based on material from <a href=\"http://yrttitarha.fi\">Yrttitarha</a> herb database by Osara Agricultural College, and published under their permission.")
                 onLinkActivated: Qt.openUrlExternally("http://yrttitarha.fi")
             }
-            AboutLabel {
+            MultilineLabel {
+                font.pixelSize: Theme.fontSizeSmall
                 text: qsTr("Yrttipiha was developed by Jussi Tiira and published under the <a href=\"https://github.com/juhi24/yrttipiha/blob/master/LICENSE\">MIT License</a>.")
                 onLinkActivated: Qt.openUrlExternally("https://github.com/juhi24/yrttipiha/blob/master/LICENSE")
             }

@@ -14,22 +14,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="47"/>
+        <location filename="../qml/pages/AboutPage.qml" line="49"/>
         <source>This app is based on material from &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha&lt;/a&gt; herb database by Osara Agricultural College, and published under their permission.</source>
         <translation>Tämä sovellus perustuu SASKY koulutuskuntayhtymän julkaisemaan &lt;a href=&quot;http://yrttitarha.fi&quot;&gt;Yrttitarha-tietokantaan&lt;/a&gt;. Tietokannan materiaalia on käytetty sen alkuperäisen julkaisijan luvalla.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="51"/>
+        <location filename="../qml/pages/AboutPage.qml" line="54"/>
         <source>Yrttipiha was developed by Jussi Tiira and published under the &lt;a href=&quot;https://github.com/juhi24/yrttipiha/blob/master/LICENSE&quot;&gt;MIT License&lt;/a&gt;.</source>
         <translation>Yrttipiha-sovelluksen on luonut Jussi Tiira ja se on julkaistu &lt;a href=&quot;https://github.com/juhi24/yrttipiha/blob/master/LICENSE&quot;&gt;MIT-lisenssillä&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="56"/>
+        <location filename="../qml/pages/AboutPage.qml" line="59"/>
         <source>Source code</source>
         <translation>Lähdekoodi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="61"/>
+        <location filename="../qml/pages/AboutPage.qml" line="64"/>
         <source>About Yrttitarha</source>
         <translation>Tietoja Yrttitarha-projektista</translation>
     </message>
@@ -37,7 +37,7 @@
 <context>
     <name>Herb</name>
     <message>
-        <location filename="../qml/pages/Herb.qml" line="110"/>
+        <location filename="../qml/pages/Herb.qml" line="106"/>
         <source> family (</source>
         <translation>-heimo (</translation>
     </message>

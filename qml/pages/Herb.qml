@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import io.thp.pyotherside 1.4
+import '../components'
 
 Page {
     id: page
@@ -73,25 +74,21 @@ Page {
                     }
                 }
             }
-            Label {
+            MultilineLabel {
                 id: latinLabel
                 color: Theme.secondaryHighlightColor
             }
-            Label {
+            MultilineLabel {
                 id: familyLabel
                 color: Theme.secondaryHighlightColor
             }
-            Label {
+            MultilineLabel {
                 id: altNamesLabel
-                wrapMode: Text.Wrap
                 color: Theme.highlightColor
-                anchors.left: parent.left; anchors.right: parent.right
             }
-            Label {
+            MultilineLabel {
                 id: sections
                 textFormat: Text.RichText
-                wrapMode: Text.Wrap
-                anchors.left: parent.left; anchors.right: parent.right
             }
         }
         VerticalScrollDecorator {}

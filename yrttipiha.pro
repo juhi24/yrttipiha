@@ -15,6 +15,7 @@ TARGET = harbour-yrttipiha
 CONFIG += sailfishapp_qml
 
 DISTFILES += \
+    qml/components/MultilineLabel.qml \
     qml/cover/CoverPage.qml \
     rpm/harbour-yrttipiha.changes.in \
     rpm/harbour-yrttipiha.changes.run.in \
@@ -25,8 +26,6 @@ DISTFILES += \
     rpm/harbour-yrttipiha.yaml \
     harbour-yrttipiha.desktop \
     qml/harbour-yrttipiha.qml \
-    qml/components/AboutLabel.qml \
-    qml/components/AboutLabelSmall.qml \
     qml/components/CoverImage.qml
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}

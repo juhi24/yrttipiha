@@ -4,9 +4,10 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-yrttipiha
 Exec=sailfish-qml harbour-yrttipiha
 Name=Yrttipiha
-# translation example:
-# your app name in German locale (de)
-#
-# Remember to comment out the following line, if you do not want to use
-# a different app name in German locale (de).
-#Name[de]=yrttipiha
+
+[X-Sailjail]
+OrganizationName=fi.j24
+ApplicationName=Yrttipiha
+# The app only reads its own bundled database and images and opens external
+# links via the system browser, so it needs no special permissions.
+Permissions=

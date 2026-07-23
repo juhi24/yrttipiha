@@ -86,12 +86,14 @@ def herb_page_data(hid):
                WHERE hn.herb_id = ?
                ORDER BY a.name''',
             (hid,)).fetchall()
+        # section_titles.priority is currently unpopulated (all NULL); fall back
+        # to the title id, whose order matches the intended reading order.
         sections = conn.execute(
             '''SELECT st.name AS title, s.text AS text
                FROM sections s
                JOIN section_titles st ON st.id = s.title_id
                WHERE s.herb_id = ?
-               ORDER BY st.priority''',
+               ORDER BY COALESCE(st.priority, st.id)''',
             (hid,)).fetchall()
 
     html = ''.join('<h2>{}</h2>{}'.format(s['title'], s['text']) for s in sections)

@@ -97,7 +97,6 @@ Page {
         id: py
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../../python'));
-            addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
             importModule('queries', function () {
                 call('queries.herb_page_data', [page.hid], function(herb) {
                     pagetitle.title = herb.name

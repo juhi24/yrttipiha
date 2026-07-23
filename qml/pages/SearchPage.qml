@@ -92,7 +92,6 @@ Page {
 
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../../python'));
-            addImportPath(Qt.resolvedUrl('../../python/yrttikanta'));
             importModule('queries', function () {});
             searchPage.changeCounter++;
             getAllHerbs();

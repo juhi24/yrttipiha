@@ -16,21 +16,25 @@ CONFIG += sailfishapp_qml
 
 DISTFILES += \
     qml/components/MultilineLabel.qml \
+    qml/components/CoverImage.qml \
     qml/cover/CoverPage.qml \
+    qml/pages/AboutPage.qml \
+    qml/pages/SearchPage.qml \
+    qml/pages/Herb.qml \
+    qml/harbour-yrttipiha.qml \
+    python/queries.py \
     rpm/harbour-yrttipiha.changes.in \
     rpm/harbour-yrttipiha.changes.run.in \
-    translations/*.ts \
-    qml/pages/AboutPage.qml \
-    qml/pages/AllHerbs.qml \
     rpm/harbour-yrttipiha.spec \
     rpm/harbour-yrttipiha.yaml \
-    harbour-yrttipiha.desktop \
-    qml/harbour-yrttipiha.qml \
-    qml/components/CoverImage.qml
+    translations/*.ts \
+    harbour-yrttipiha.desktop
 
 DEPLOYMENT_PATH = /usr/share/$${TARGET}
 
-python.files = python/sqlalchemy/lib/sqlalchemy python/queries.py
+# The runtime backend is pure stdlib sqlite3 (see python/queries.py); only the
+# query module and the yrttikanta data package (DB + images) are deployed.
+python.files = python/queries.py
 python.files += python/yrttikanta/yrttikanta
 python.path = $${DEPLOYMENT_PATH}/python
 INSTALLS += python
@@ -45,8 +49,5 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 # following CONFIG line
 CONFIG += sailfishapp_i18n
 
-# German translation is enabled as an example. If you aren't
-# planning to localize your app, remember to comment out the
-# following TRANSLATIONS line. And also do not forget to
-# modify the localized app name in the the .desktop file.
+# The app is Finnish-only; strings live in translations/.
 TRANSLATIONS += translations/harbour-yrttipiha-fi.ts
